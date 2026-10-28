@@ -1,0 +1,3 @@
+# The Event log is immutable; old shapes are upcast on read
+
+Stored Events are never edited. Every Event carries a Schema version, and Upcasters turn old shapes into current ones when Events are read. Rare structural fixes use an offline copy-and-transform tool that writes a new Stream and forces a rebuild of the affected Readmodels. The old stack changed schemas by rewriting stored events in place, in about ten migration Tasks, one of which even renumbered Revisions. With Checkpointed readers, an in-place rewrite of an Event that has already been read silently leaves Readmodels and Sagas inconsistent.

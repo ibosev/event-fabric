@@ -1,0 +1,11 @@
+node_modules/
+*.local.md
+dist/
+*.tsbuildinfo
+coverage/
+test/.legacy-slice-*/
+.DS_Store
+.env
+.env.*
+.agents/
+.claude/

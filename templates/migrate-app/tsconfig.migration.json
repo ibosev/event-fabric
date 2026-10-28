@@ -1,0 +1,17 @@
+{
+	"//": "checkJs over the migrated source with the TypeScript EventFabric uses (jsconfig.json's options predate it).",
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"allowJs": true,
+		"checkJs": true,
+		"strict": false,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"maxNodeModuleJsDepth": 0,
+		"paths": %%paths%%
+	},
+	"include": ["app/**/*.js", "migration/legacy-app.d.ts"],
+	"exclude": %%exclude%%
+}
